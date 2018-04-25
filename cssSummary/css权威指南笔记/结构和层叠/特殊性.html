@@ -1,0 +1,30 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <style type="text/css">
+          p{font-style: normal} /* 0,0,0,1 */
+          body div p{font-style:italic} /* 0,0,0,3 (winner)*/
+          html > body table tr[id="totals"] td ul > li{color:maroon;} /* 0,0,1,7 */
+          li#answer {color: navy} /* 0,1,0,1 (winner)/* 
+      </style>
+  </head>
+  <body>
+      <h1>特殊性的规则</h1>
+        <p>
+          1.用了ID +0,1,0,0
+          <br>
+          2.用class、属性(如[id="btn1"])、伪类(如:hover) +0,0,1,0
+          <br>
+          3.元素和伪元素(如::before) 加0,0,0,1
+          <br>
+          4.结合符对特殊性没有贡献,而通配符的贡献是0,0,0,0.(所以他们对总特殊性没有影响)
+          <br>
+          5.内联样式的特殊性+1,0,0,0,均相同，无论如何变化
+          6.！important胜出所有
+        </p>
+  </body>
+  </html>
+

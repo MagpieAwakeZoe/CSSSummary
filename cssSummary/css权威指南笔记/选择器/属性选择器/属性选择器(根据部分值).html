@@ -1,0 +1,39 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <style type="text/css">
+          div{
+            width: 400px;
+            height: 250px;
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+          }
+
+          div[class~="btn"]{                             /*属性选择器，选择类里带有btn部分的元素，赋予样式，标签名[属性名称~=value]*/
+            background-color: aqua;
+          }
+          div[class~="btn-success"]{                      
+           color: yellow;
+          }
+
+
+          /*
+          [foo^="value"]  以value开头
+          [foo$="value"]  以value结尾
+          [foo*="value"]  包含子串value
+          */
+      </style>
+  </head>
+  <body>
+        <div class="btn btn-primary">btn-primary</div>
+        <div class="btn btn-warning">btn-warning</div>
+        <div class="btn btn-info">btn-info</div>
+        <div class="btn btn-success">btn-success</div>
+  </body>
+  </html>
+

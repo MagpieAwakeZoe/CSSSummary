@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紧贴底部的页脚</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        header{
+            line-height: 80px;
+        }
+        header,footer{
+            background-color: #ccc;
+            text-align: center;
+        }
+        main{
+            text-align: center;
+            font-size: 30px;
+        }
+        .wrapper{
+            min-height:calc(100vh - 80px);      /*动态计算高度*/
+            /*这里介绍一下视窗单位：vh相对于视窗的高度，视窗的高度是100vh,同理宽度vw，100vw*/
+        }
+        footer{
+            height: 80px;           /*页脚80px高度，从wrapper里100vh里面扣除的80px*/
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <span>Header</span>
+    </header>
+    <main>
+        <p>我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容</p>
+    </main>
+</div>
+<footer>
+    <span>Footer</span>
+</footer>
+</body>
+</html>

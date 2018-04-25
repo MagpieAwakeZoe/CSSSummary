@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .container {
+            background-color: red;
+            overflow: hidden; /* creates a block formatting context */
+        }
+
+        p {
+            margin: 10px 0;
+            background-color: lightgreen;
+        }
+
+        .newBFC {
+            overflow: hidden; /* creates new block formatting context */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p>silbing1</p>
+    <p>silbing2</p>
+    <div class="newBFC">
+        <p>silbing3</p>
+    </div>
+
+    原来3个p标签同属于一个BFC容器,class为container的BFC容器,现新增一个class为newBFC的容器
+    和原来的BFC容器区分开来就可以避免上下边距重叠了。
+</div>
+</body>
+</html>
+

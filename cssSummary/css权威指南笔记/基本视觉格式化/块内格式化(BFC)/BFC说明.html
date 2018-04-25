@@ -1,0 +1,56 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <style type="text/css">
+        
+      </style>
+  </head>
+  <body>
+    <div>
+      float 的值不为 none
+      <br>
+      position 的值不为 static 或 relative
+      <br>
+      display 的值为 table-cell、table-caption、inline-block、flex 或 inline-flex
+      <br>
+      overflow 的值不为 visiable
+      <br>
+      <br>
+      <br>
+      显式地使用BFC可以添加以下元素
+      <br>
+      display: table 可能引发响应性问题
+      <br>
+      overflow: scroll 可能产生多余的滚动条
+      <br>
+      float: left 将把元素移至左侧，并被其他元素环绕
+      <br>
+      overflow: hidden 将裁切溢出元素
+      <br>
+      <br>
+      <br>
+      使用BFC可以避免外边距重叠的效果
+      <br>
+      通过创建新的BFC我们可以避免外边距折叠
+      <br>
+      <br>
+      <br>
+      特性：
+      <br>
+      在BFC中，内部的Box会在垂直方向，一个接一个地放置；
+      <br>
+      Box垂直方向的距离由margin决定，同一个BFC下相邻两个Box的margin会发生重叠；
+      <br>
+      在BFC中，每一个盒子的左外边缘（margin-left）会触碰到容器(父级)的左边缘(border-left)
+      <br>
+      形成了BFC的区域不会与float box重叠（可阻止因浮动元素引发的文字环绕现象）；
+      <br>
+      计算BFC高度时，浮动元素也参与计算（BFC会确切包含浮动的子元素，即闭合浮动）。
+      <br>
+      </div>
+  </body>
+  </html>
+

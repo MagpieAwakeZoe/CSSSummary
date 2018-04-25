@@ -1,0 +1,38 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <style type="text/css">
+          div{
+            width: 400px;
+            height: 250px;
+            position: relative;
+            margin-top: 20px;
+            /*margin: auto;*/
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .warning{
+            background-color: red;
+          }
+          .urgent{
+            font-style: italic;
+          }
+          .warning.irgent{
+            font-weight: bold;
+          }
+          .urgent.help.warning{
+            border: 4px solid black;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="urgent warning">urgent warning</div>
+      <div class="warning">warning</div>
+      <div class="urgent help warning">urgent help warning</div>
+  </body>
+  </html>
+

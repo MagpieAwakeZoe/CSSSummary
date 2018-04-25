@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .gr{
+            width: 100px;
+            height: 100px;
+            margin:  auto;
+            display: inline-block;
+        }
+        .gr.gr1{
+            background: linear-gradient(#fb3, #58a);            /*容器渐变区域接近100%*/
+        }
+        .gr.gr2{
+            background: linear-gradient(#fb3 20%, #58a 80%);    /*真正容器渐变区域在20%-80之间*/
+        }
+        .gr.gr3{
+            background: linear-gradient(#fb3 50%, #58a 50%);    /*真正容器渐变区域几乎为0*/
+        }
+        .gr.gr4{
+            background: linear-gradient(#fb3 50%, #58a 50%);    /*真正容器渐变区域几乎为0*/
+            background-size: 100% 30px;                          /*可以调整尺寸,因为是重复的所以形成条纹*/
+        }
+        .gr.gr5{
+            background:  linear-gradient(#fb3 33.3%,#58a 0, #58a 66.6%, yellowgreen 0);
+            background-size: 100% 30px;                          /*多种颜色*/
+        }
+        .gr.gr6{
+            background:  linear-gradient(to right,#fb3 50%, #58a 0);
+            background-size: 100% 30px;                          /*垂直条纹*/
+        }
+        .gr.gr7{
+            background:  linear-gradient(45deg,#fb3 50%, #58a 0);
+            background-size: 30px 30px;                          /*斜向条纹*/
+                /*通过调整角度来改变条纹的倾斜程度*/
+        }
+    </style>
+</head>
+<body>
+    <div class="gr gr1"></div>
+    <div class="gr gr2"></div>
+    <div class="gr gr3"></div>
+    <div class="gr gr4"></div>
+    <div class="gr gr5"></div>
+    <div class="gr gr6"></div>
+    <div class="gr gr7"></div>
+</body>
+</html>

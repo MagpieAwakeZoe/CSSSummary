@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #container-div
+        {
+            width: 100px;
+            height: 200px;
+            background: cornflowerblue;
+        }
+        span:nth-child(1)/*伪类选择器，选择span标签，同时它要是其父元素的第一个子元素*/
+        {
+            color: orange;
+            background:rebeccapurple;
+        }
+        span:nth-child(2)
+        {
+            color: green;
+            background: goldenrod;
+        }
+    </style>
+</head>
+<body>
+<div id="container-div">
+    <span >ItIsSpan1</span><span>ItIsSpan2</span>
+    <!--两个span元素的宽度总和已经大于line box的宽度了，但是第二个元素没有进行换行布局-->
+    <!--第一个span里面的字符串和第二个span里面的字符串之间不存在空格，因此IFC把他们的内容理解成一个连续的字符串-->
+</div>
+</body>
+</html>

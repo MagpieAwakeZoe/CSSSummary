@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 800px;
+            height: auto;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+        html {
+            font-size: 100%;
+        }
+        body {
+            margin: 0;
+            word-wrap: break-word;
+            font: 16px/1.5 Helvetica, Arial;
+            color: #333;
+            padding: 0 12px;
+            }
+        img {
+            border: 0;
+            vertical-align: top;
+        }
+        ul,li{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .list-img {
+            overflow: hidden;
+            margin-top: 6px;
+            margin-right: -4px;
+        }
+        .item-img {
+            box-sizing: border-box;
+            position: relative;
+            width: 33.333%;
+            float: left;
+            padding: 0 4px 4px 0;
+        }
+        /* 只有一项 */
+        /* :only-child 等 效 于 :first-child:last-child */
+        .item-img:only-child{
+            width: 50%;
+        }
+        /* 只有两项 */
+        .item-img:first-child:nth-last-child(2),
+        .item-img:first-child:nth-last-child(2) ~ .item-img{
+            width: 40%;
+        }
+        /* 只有四项 */
+        .item-img:first-child:nth-last-child(4),
+        .item-img:first-child:nth-last-child(4) ~ .item-img{
+            width: 35%;
+        }
+
+
+        .item-img:after {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: 100%;
+        }
+        .item-img>img {
+            box-sizing: border-box;
+            position: absolute;
+            padding: 0 4px 4px 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+<ul class="list-img">
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+</ul>
+<ul class="list-img">
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+</ul>
+<ul class="list-img">
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+</ul>
+<ul class="list-img">
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+</ul>
+<ul class="list-img">
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+    <li class="item-img"><img src="ex1.jpg" alt=""></li>
+</ul>
+</div>
+</body>
+</html>

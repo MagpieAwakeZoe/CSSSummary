@@ -1,0 +1,28 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <style type="text/css">
+          p{color: red !important;}   /*winner*/
+          p{color: red}
+
+
+          p{color: red}
+          p{color: green}             /*winner*/
+
+
+          p#make{color: red}          /*winner*/
+          p{color: green}
+      </style>
+  </head>
+  <body>
+      <!-- 层叠的规则:
+      1.拥有!important的权重最大
+      2.行内样式
+      3.特殊性比较，特殊性大的权重大
+      4.按出现顺序，后出现的权重大 -->
+  </body>
+  </html>
+

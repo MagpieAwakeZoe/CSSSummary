@@ -1,0 +1,35 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <style type="text/css">
+         a:link{
+            color:pink;                 /*访问前的样式*/
+         }
+         a:visited{
+            color: aqua;                /*已经访问过了的样式*/
+         }
+         a:hover{
+            font-size: 20px;            /*鼠标悬停时候*/
+            color:red;
+         }
+         a:active{
+            color:orange;               /*选定的链接(链接被点击了)*/
+         }  
+
+         /*
+          提示：在 CSS 定义中，a:hover 必须被置于 a:link 和 a:visited 之后，才是有效的。
+          提示：在 CSS 定义中，a:active 必须被置于 a:hover 之后，才是有效的。
+          提示：伪类名称对大小写不敏感。
+         */
+      </style>
+  </head>
+  <body>
+    <div>
+        <a href="http://www.baidu.com">www.baidu.com</a>
+    </div>
+  </body>
+  </html>
+

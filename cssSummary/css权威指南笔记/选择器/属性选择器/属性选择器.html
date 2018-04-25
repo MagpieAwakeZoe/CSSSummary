@@ -1,0 +1,32 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <style type="text/css">
+          div{
+            width: 400px;
+            height: 250px;
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+          }
+
+          div[title]{                             /*属性选择器，选择带有title属性的元素，赋予样式，标签名[属性名称]*/
+            background-color: aqua;
+          }
+          div[label]{
+            background-color: grey;
+          }
+      </style>
+  </head>
+  <body>
+        <div title="123"></div>
+        <div label="123"></div>
+        <div title="345"></div>
+        <div label="345"></div>
+  </body>
+  </html>
+

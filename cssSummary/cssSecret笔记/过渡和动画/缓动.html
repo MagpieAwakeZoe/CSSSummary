@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bottle{
+            margin: auto;
+            width: 100px;
+            height: 600px;
+            background:linear-gradient(180deg , aquamarine,white);
+            border: 1px solid black;
+        }
+        .rad{
+            width: 80px;
+            height: 80px;
+            background:radial-gradient(red,white);
+            border-radius: 50%;
+            margin-left: 10px;
+            animation: bounce 3s cubic-bezier(.1,.25,1,.25);        /*通过调整贝塞尔曲线的参数来改变运动加速度*/
+            border: 1px solid black;
+        }
+        @keyframes bounce {
+            60%, 80%, to {
+                transform: translateY(400px);
+                animation-timing-function: ease;
+            }
+            70% {
+                transform: translateY(300px);
+            }
+            90% {
+                transform: translateY(360px);
+            } }
+    </style>
+</head>
+<body>
+    <div class="bottle">
+        <div class="rad">
+        </div>
+    </div>
+</body>
+</html>

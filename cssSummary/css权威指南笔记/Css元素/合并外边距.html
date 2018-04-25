@@ -1,0 +1,36 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <style type="text/css">
+          .box{
+            margin-left: auto;
+            margin-right: auto;
+            width: 600px;
+            height: 400px;
+          }
+          .box.box1{
+            background-color: aqua;
+            margin-top: 50px;
+            margin-bottom: 50px;
+          }
+          .box.box2{
+            background-color: red;
+            margin-top: 50px;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="box box1">
+        box1设置了margin-bottom为50px，box2设置了margin-top为50px，<br>
+        使得两个盒子的垂直外边距重合，仅仅在垂直的时候外边距默认重合，<br>
+        水平的外边距不会重合。如果有一方的边距比较大，按照大的边距算入
+      </div>
+      <div class="box box2">
+        如果想取消外边距重叠的效果，则可以把元素改成inline-block,浮动或者绝对定位
+      </div>
+  </body>
+  </html>
+

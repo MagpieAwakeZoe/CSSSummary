@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #left_float {
+            height: 100px;
+            width: 100px;
+            float: left;
+            background: lightblue;
+        }
+
+        #BFC {
+            width: 200px;
+            height: 200px;
+            background: #eee;
+            overflow: hidden;
+            /*加入overflow:hidden产生了一个BFC容器，与之前的浮动形成不同的BFC盒子*/
+        }
+    </style>
+</head>
+<body>
+    <div id="left_float">我是一个左浮动的元素</div>
+    <div id="BFC">我是一个没有设置浮动,也没有触发 BFC 元素, width: 200px; height:200px; background: #eee;</div>
+</body>
+</html>

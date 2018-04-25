@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        dt, dd {
+            display: inline;            /*将块级元素转化成行内元素，使得必要的内容显示在同一行*/
+        }
+
+        dd {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        dd::after {
+            content: "\A";              /*通过伪元素添加\A二进制换行符使得行内元素换行*/
+            white-space: pre;
+        }
+
+
+    </style>
+</head>
+<body>
+<div>
+    <dl>
+        <dt>Name:</dt>
+        <dd>Lea Verou</dd>
+
+        <dt>Email:</dt>
+        <dd>lea@verou.me</dd>
+
+        <dt>Location:</dt>
+        <dd>Earth</dd>
+    </dl>
+
+</div>
+</body>
+</html>

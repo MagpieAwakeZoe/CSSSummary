@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #container-div
+        {
+            width: 100px;
+            height: 200px;
+            background: cornflowerblue;
+        }
+        span:nth-child(1)/*伪类选择器，选择span标签，同时它要是其父元素的第一个子元素*/
+        {
+            color: orange;
+            background:rebeccapurple;
+        }
+        span:nth-child(2)
+        {
+            color: green;
+            background: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <div id="container-div">
+        <span >This is a span</span>
+        一个span里的内容大于line-box的长度会换行拆分，分布在两个line-box里
+    </div>
+</body>
+</html>

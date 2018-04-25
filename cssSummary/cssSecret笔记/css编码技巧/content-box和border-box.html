@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .content-box{
+            width: 100px;
+            height: 100px;
+            background-color:aqua;
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing:content-box;
+        }
+        .border-box{
+            width: 100px;
+            height: 100px;
+            background-color:aqua;
+            border: 1px solid black;
+            box-sizing:border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">content-box</div>
+    <!--content-box是内容为100*100的矩形，不算上padding和border的情况-->
+    <br>
+    <div class="border-box">border-box</div>
+    <!--border-box是内容算上border和padding后总面积是100*100的矩形区块，同种条件下比content-box小-->
+</body>
+</html>

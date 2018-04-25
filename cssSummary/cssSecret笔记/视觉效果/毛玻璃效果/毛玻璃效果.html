@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>frosted glass</title>
+    <style type="text/css">
+        body {
+            min-height: 100%;
+            margin: 0;
+            padding-top: calc(50vh - 6em);  /*间距*/
+            font: 150%/1.6 serif;           /*字体*/
+        }
+
+        body, main::before {
+            background: url("bg2.jpg") fixed;      /*这里必须设置fixed*/
+            background-size: cover;
+        }
+
+        main {
+            position: relative;
+            margin: 0 auto;                 /*水平居中*/
+            padding: 1em;                   /*设置内边距*/
+            max-width: 30em;                /*设置宽度和最大宽度*/
+            border-radius: .3em;            /*边框*/
+            box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset,      /*内阴影*/
+            0 .5em 1em rgba(0, 0, 0, 0.6);                           /*基于上层阴影再次添加不同颜色的阴影*/
+            text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);           /*文本阴影*/
+            background: hsla(0, 0%, 100%, .3);                      /*滤镜的颜色(白色)*/
+            overflow: hidden;                                       /*内容溢出处理忽略溢出*/
+        }
+
+        main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            background-attachment:fixed;
+            filter: blur(5px);          /*模糊程度*/
+            margin: -30px;              /*控制伪元素的扩张范围，调整模糊的半径*/
+            /*background: rgba(255,0,0,.5);*/
+        }
+    </style>
+</head>
+
+<body>
+<main>
+    苏子曰：“客亦知夫水与月乎？逝者如斯，而未尝往也;
+    盈虚者如彼，而卒莫消长也。盖将自其变者而观之，
+    则天地曾不能以一瞬。自其不变者而观之，则物与我皆无尽也，而又何羡乎？
+    且夫天地之间，物各有主。苟非吾之所有，虽一毫而莫取。
+    惟江上之清风，与山间之明月。耳得之而为声，目遇之而成色。
+    取之无禁，用之不竭，是造物者之无尽藏(zàng)也，而吾与子之所共适(shì)。”
+</main>
+</body>
+</html>

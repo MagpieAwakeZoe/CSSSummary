@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            background-color: #ffbb33;
+            margin: 40px;
+        }
+        .box.box1{
+            box-shadow: 2px 3px 4px rgba(0,0,0,0.5);
+            /*原理:构造一块透明度50%的黑色部分，模糊化后进行平移，右移动2px,下移动3px，进行4px的模糊处理，最后重叠部分去除*/
+        }
+        .box.box2{
+            box-shadow: 0 5px 4px -4px black;
+            /*单侧阴影效果，通过修改第四个参数，扩张半径来扩大或者缩小阴影的size*/
+        }
+        .box.box3{
+            box-shadow: 5px 0 5px -5px black,
+                        -5px 0 5px -5px black;
+            /*双侧投影效果，连续两次单侧投影的效果叠加*/
+        }
+    </style>
+</head>
+<body>
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+</body>
+</html>
